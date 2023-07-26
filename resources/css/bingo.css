@@ -11,3 +11,10 @@ html{
 #ballSet{
     font-size: 1.8rem;
 }
+#player{
+    font-size : 1.8rem;
+}
+h1 {
+    color: crimson;
+    font-size : 4rem;
+}
