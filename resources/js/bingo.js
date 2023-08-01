@@ -3,7 +3,6 @@ const ballGame = {
     newCard: [],
 
 
-
     replaceBalls() {
         for (let i = 1; i <= 90; i++) {
             this.ballSet.push([i]);
@@ -11,34 +10,24 @@ const ballGame = {
     },
 
     getNewCards() {
-        let numberToBeChecked;
-        let tempArr = [];
-        //generate 15 random numbers for card
-        //for (let i = 0; i <= 14; i++) {
-        while (this.newCard.length <= 14) {
+        let duplicates = [];
+        //generate 15 random numbers for card and puts them in an array newCard
+        for (let i = 0; i <= 14; i++) {
             let randNum = Math.floor((Math.random() * this.ballSet.length) + 1);
-
-            if (this.newCard.indexOf === 0) {
-                this.newCard.push(randNum);
-            } else {
-                for (i = 1; i <= this.newCard.length; i++) { 
-                    if (randNum === this.newCard[i]){
-                        continue;
-                    } else {
-                        this.newCard.push(randNum);
-                    }
-                }
-            }
-
-
-
-
-
-
             this.newCard.push(randNum);
-            console.log(this.newCard);
         }
+        const tempArray = this.newCard.sort();
+
+        for (let i = 0; i < tempArray.length; i++) {
+            if (tempArray[i + 1] === tempArray[i]) {
+                duplicates.push(tempArray[i])
+            }
+        }
+
+        console.log(duplicates)
     },
+
+
 };
 
 
@@ -72,16 +61,22 @@ const ballGame = {
 
 
 
-
+//call the method that fills the array
 ballGame.replaceBalls();
 ballGame.getNewCards();
+//call the newly filled array
 let set = ballGame.ballSet;
 let card = ballGame.newCard;
 //console.log(set.join(' '));
-console.log(card.join(', '))
+//console.log(card.join(', '))
 
-
-//document.getElementById("ballSet"). innerHTML = set.join(' ');
+//The html elements id is called and populated with the contents of the variable from the newly filled array.
+document.getElementById("ballSet"). innerHTML = set.join(' ');
 //document.getElementById("player"). innerHTML = card.join(' ');
 //document.getElementById("cardTwo"). innerHTML = cardTwo.join(' ');
 //document.getElementById("cardThree"). innerHTML = cardThree.join(' ');
+
+const button = document.querySelector(".btn");
+button.onclick = () => {
+    document.getElementById("player"). innerHTML = card.join(' ');
+}
