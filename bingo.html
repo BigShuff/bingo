@@ -9,6 +9,45 @@
 </head>
 <body>
     <h1>Automated Bingo</h1>
+<!-- pop-up dialog box containing a form to explain game and select player number -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>
+      <label for="favAnimal">Favorite animal:</label>
+      <select id="favAnimal" name="favAnimal">
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select>
+    </p>
+    <div>
+      <button id="cancel" type="reset">Cancel</button>
+      <button type="submit">Confirm</button>
+    </div>
+  </form>
+</dialog>
+
+<div>
+  <button id="updateDetails">Update details</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <p class="ballSetLabel">Ball Set</p>
     <p id="ballSet"></p>
     <p class='ballSetLabel'>Player One</p>

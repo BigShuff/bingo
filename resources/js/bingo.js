@@ -29,24 +29,31 @@ const ballGame = {
 
 
 };
+// code for dialog box
+const updateButton = document.getElementById("updateDetails");
+const cancelButton = document.getElementById("cancel");
+const dialog = document.getElementById("favDialog");
+dialog.returnValue = "favAnimal";
 
+function openCheck(dialog) {
+  if (dialog.open) {
+    console.log("Dialog open");
+  } else {
+    console.log("Dialog closed");
+  }
+}
 
-//take each number of the array in order and check it against the rest of the numbers to find duplicates
-// for (let i = 0; i <= this.newCard.length - 1; i++) {
-//     for (let j = 0; j <= this.newCard.length - 1; j++) {
-//         if (this.newCard.indexOf(this.newCard[i]) === this.newCard.indexOf(this.newCard[j])) {
-//             continue;
-//         } else {
-//             tempArr.push(this.newCard[j]);
-//             }
-//     }
+// Update button opens a modal dialog
+updateButton.addEventListener("click", () => {
+  dialog.showModal();
+  openCheck(dialog);
+});
 
-// }
-//console.log(tempArr);
-
-
-
-
+// Form cancel button closes the dialog box
+cancelButton.addEventListener("click", () => {
+  dialog.close("animalNotChosen");
+  openCheck(dialog);
+});
 
 //insert into an array at a specific place
 //about inserting into an array
