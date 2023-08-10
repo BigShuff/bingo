@@ -8,29 +8,35 @@
     <title>Bingo</title>
 </head>
 <body>
-    <h1>Automated Bingo</h1>
+   
+
 <!-- pop-up dialog box containing a form to explain game and select player number -->
-<dialog id="favDialog">
-  <form method="dialog">
-    <p>
-      <label for="favAnimal">Favorite animal:</label>
-      <select id="favAnimal" name="favAnimal">
-        <option></option>
-        <option>Brine shrimp</option>
-        <option>Red panda</option>
-        <option>Spider monkey</option>
-      </select>
-    </p>
-    <div>
-      <button id="cancel" type="reset">Cancel</button>
-      <button type="submit">Confirm</button>
-    </div>
+<dialog class="modal" id="modal">
+  <h1>AutoMatic Bingo</h1>
+  <label for="numberSelect">Choose An Amount Of Players:</label>
+  <select name="numbers" id="numberSelect">
+  <option value="">--Please choose an option--</option>
+  <option value="one">1 Player</option>
+  <option value="two">2 Players</option>
+  <option value="three">3 Players</option>
+  <option value="four">4 Players</option>
+</select>
+<form>
+  <button class="numButton" type="button">OK</button>
   </form>
 </dialog>
 
-<div>
-  <button id="updateDetails">Update details</button>
-</div>
+
+
+  <!-- Simple html container and children to show the use of CSS Grid as a wireframe tool -->
+  <!-- <div class="grid_container">
+      <div class="grid_item1"><h1 class="header">AutoMatic Bingo</h1></div>
+      <div class="grid_item2">Navigation</div>
+      <div class="grid_item3">Main information area</div>
+      <div class="grid_item4">Grid for Bingo</div>
+      <div class="grid_item5">Other pages you want to drive traffic to.</div>
+      <div class="grid_item6">Footer information</div>
+  </div> -->
 
 
 
@@ -41,20 +47,16 @@
 
 
 
-
-
-
-
-
+<!-- 
 
 
     <p class="ballSetLabel">Ball Set</p>
-    <p id="ballSet"></p>
+    
     <p class='ballSetLabel'>Player One</p>
     <p id="player"></p>
     <p id="cardTwo"></p>
     <p id="cardThree"></p>
-    <button class="btn" type="button">Click Me!</button>
+    <button class="btn" type="button">Click Me!</button> -->
 
     
 </body>

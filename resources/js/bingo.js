@@ -1,59 +1,34 @@
-const ballGame = {
-    ballSet: [],
-    newCard: [],
+// const bingoGame = {
+//   ballSet: [],
+//   newCard: [],
+
+//  replaceBalls() {
+//     for (let i = 1; i <= 90; i++) {
+//       this.ballSet.push([i]);
+//     }
+//   },
+
+//   getNewCards() {
+//     let duplicates = [];
+//     //generate 15 random numbers for card and puts them in an array newCard
+//     for (let i = 0; i <= 14; i++) {
+//       let randNum = Math.floor((Math.random() * this.ballSet.length) + 1);
+//       this.newCard.push(randNum);
+//     }
+//     const tempArray = this.newCard.sort();
+
+//     for (let i = 0; i < tempArray.length; i++) {
+//       if (tempArray[i + 1] === tempArray[i]) {
+//         duplicates.push(tempArray[i])
+//       }
+//     }
+
+//     console.log(duplicates)
+//   },
+// };
 
 
-    replaceBalls() {
-        for (let i = 1; i <= 90; i++) {
-            this.ballSet.push([i]);
-        }
-    },
 
-    getNewCards() {
-        let duplicates = [];
-        //generate 15 random numbers for card and puts them in an array newCard
-        for (let i = 0; i <= 14; i++) {
-            let randNum = Math.floor((Math.random() * this.ballSet.length) + 1);
-            this.newCard.push(randNum);
-        }
-        const tempArray = this.newCard.sort();
-
-        for (let i = 0; i < tempArray.length; i++) {
-            if (tempArray[i + 1] === tempArray[i]) {
-                duplicates.push(tempArray[i])
-            }
-        }
-
-        console.log(duplicates)
-    },
-
-
-};
-// code for dialog box
-const updateButton = document.getElementById("updateDetails");
-const cancelButton = document.getElementById("cancel");
-const dialog = document.getElementById("favDialog");
-dialog.returnValue = "favAnimal";
-
-function openCheck(dialog) {
-  if (dialog.open) {
-    console.log("Dialog open");
-  } else {
-    console.log("Dialog closed");
-  }
-}
-
-// Update button opens a modal dialog
-updateButton.addEventListener("click", () => {
-  dialog.showModal();
-  openCheck(dialog);
-});
-
-// Form cancel button closes the dialog box
-cancelButton.addEventListener("click", () => {
-  dialog.close("animalNotChosen");
-  openCheck(dialog);
-});
 
 //insert into an array at a specific place
 //about inserting into an array
@@ -66,24 +41,53 @@ cancelButton.addEventListener("click", () => {
 
 
 
+const modal = document.getElementById("#modal");
+const closeModal = document.querySelector(".numButton");
+
+
+closeModal.addEventListener("click", ()=> {
+  closeModal();
+});
+window.addEventListener("load", (event) => {
+  openModal();
+});
+
+function openModal(){
+  modal.showModal();
+}
+
+function closeModal(){
+  modal.close();
+
+}
 
 
 //call the method that fills the array
-ballGame.replaceBalls();
-ballGame.getNewCards();
+//bingoGame.replaceBalls();
+//bingoGame.getNewCards();
 //call the newly filled array
-let set = ballGame.ballSet;
-let card = ballGame.newCard;
+//let set = bingoGame.ballSet;
+//let card = bingoGame.newCard;
 //console.log(set.join(' '));
 //console.log(card.join(', '))
 
+// code for dialog box
+
+
 //The html elements id is called and populated with the contents of the variable from the newly filled array.
-document.getElementById("ballSet"). innerHTML = set.join(' ');
+//document.getElementById("ballSet").innerHTML = set.join(' ');
 //document.getElementById("player"). innerHTML = card.join(' ');
 //document.getElementById("cardTwo"). innerHTML = cardTwo.join(' ');
 //document.getElementById("cardThree"). innerHTML = cardThree.join(' ');
 
-const button = document.querySelector(".btn");
-button.onclick = () => {
-    document.getElementById("player"). innerHTML = card.join(' ');
-}
+
+
+// numButton.addEventListener("click", ()=>{
+//   console.log('Hello');
+
+//   });
+
+  //const button = document.querySelector(".btn");
+// button.onclick = () => {
+//   document.getElementById("player").innerHTML = card.join(' ');
+// }
