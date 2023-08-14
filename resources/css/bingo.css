@@ -34,15 +34,34 @@ html{
 }
 
 .grid_item3 {
-    border: 2px solid black;
+    border: 2px solid rgb(6, 240, 108);
     grid-row: 2 / 3;
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-columns : 1fr;
+    /* margin: 1rem; */
+    
+}
+
+.bingoHead{
+    border: 1px solid black;
 }
 
 .grid_item4 {
-    border: 2px solid black;
+    border: 2px solid rgb(2, 55, 245);
     grid-row: 3 / 4;
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+    /* margin: 1rem; */
+   
+}
+
+.playerSet{
+    border: 1px solid black;
 }
 
 .grid_item5 {
@@ -62,4 +81,116 @@ html{
     color: crimson;
     font-size: 3rem;
     padding-left: 1rem;
+}
+
+.modal{
+    max-width: 200rem;
+}
+
+h3{
+    font-size: 2.5rem;
+    color: crimson; 
+}
+.howToPlay{
+    font-size: 1.6rem;
+    font-weight: 500;
+    
+}
+
+select option{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.playerAmtLbl{
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding-right: 1rem;
+}
+
+h4{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.numButton{
+    width: 10rem;
+    height: 5rem;
+   
+}
+
+.flexCont{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.labelHolderForHeader{
+    display: grid;
+    align-items: center;
+}
+
+.labelHolderForNumberCalled{
+    display: grid;
+    justify-items: center;
+    align-content: end;
+    
+
+}
+.labelForNumberCalled{
+    height: 2rem;
+    width: 15rem;
+    border: 1px solid red;
+    padding-bottom: 1rem;
+    
+}
+
+.labels{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.numberCalledHolder{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+.numberCalled{
+    height: 8rem;
+    width: 8rem;
+    border: 1px solid black;
+}
+
+.playerLabel{
+    margin: auto;
+    /* text-align: center; */
+}
+
+.buttonHolders{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    align-self: center;
+    height: 6rem;
+    width: 20rem;
+    font-weight: 700;
+    font-size: 2rem;
+    cursor:pointer;
+
+   
+}
+
+.bingoCardHolder{
+    border: 1px solid black;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.bingoCards{
+    border: 1px solid black;
 }

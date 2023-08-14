@@ -41,25 +41,20 @@
 
 
 
-const modal = document.getElementById("#modal");
+const modal = document.getElementById("modal");
 const closeModal = document.querySelector(".numButton");
 
-
-closeModal.addEventListener("click", ()=> {
-  closeModal();
-});
-window.addEventListener("load", (event) => {
-  openModal();
-});
-
-function openModal(){
+window.addEventListener("DOMContentLoaded", (event) => {
   modal.showModal();
-}
+});
 
-function closeModal(){
+closeModal.addEventListener("click",()=> {
+  const playerNum = document.getElementById("numberSelect").value;
   modal.close();
+});
 
-}
+
+
 
 
 //call the method that fills the array

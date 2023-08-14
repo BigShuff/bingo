@@ -1,63 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/css/bingo.css">
-    <script src="resources/js/bingo.js" defer></script>
-    <title>Bingo</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="resources/css/bingo.css">
+  <script src="resources/js/bingo.js" defer></script>
+  <title>Bingo</title>
 </head>
+
 <body>
-   
-
-<!-- pop-up dialog box containing a form to explain game and select player number -->
-<dialog class="modal" id="modal">
-  <h1>AutoMatic Bingo</h1>
-  <label for="numberSelect">Choose An Amount Of Players:</label>
-  <select name="numbers" id="numberSelect">
-  <option value="">--Please choose an option--</option>
-  <option value="one">1 Player</option>
-  <option value="two">2 Players</option>
-  <option value="three">3 Players</option>
-  <option value="four">4 Players</option>
-</select>
-<form>
-  <button class="numButton" type="button">OK</button>
-  </form>
-</dialog>
 
 
-
+  <!-- pop-up dialog box containing a form to explain game and select player number -->
+  <dialog class="modal" id="modal">
+    <h3>AutoMatic Bingo</h3>
+    <label for="numberSelect" class="playerAmtLbl">Choose Number of Players And Press OK:</label>
+    <select name="numbers" id="numberSelect">
+      <option value="#">--Please choose an option--</option> 
+      <option value="1">1 Player</option>
+      <option value="2">2 Players</option>
+      <option value="3">3 Players</option>
+      <option value="4">4 Players</option>
+    </select>
+    <form method="dialog">
+      <div class="flexCont">
+        <button class="numButton" type="submit">OK</button>
+      </div>
+    </form>
+    <h4>How To Play</h4>
+    <p class="howToPlay">Either choose one player and play against the computer,<br>
+      or choose multiple players, and play with your friends,<br>
+      each player chooses a player number and the first to<br>
+      fill the card wins.</p>
+  </dialog>
   <!-- Simple html container and children to show the use of CSS Grid as a wireframe tool -->
-  <!-- <div class="grid_container">
-      <div class="grid_item1"><h1 class="header">AutoMatic Bingo</h1></div>
-      <div class="grid_item2">Navigation</div>
-      <div class="grid_item3">Main information area</div>
-      <div class="grid_item4">Grid for Bingo</div>
-      <div class="grid_item5">Other pages you want to drive traffic to.</div>
-      <div class="grid_item6">Footer information</div>
-  </div> -->
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-
-    <p class="ballSetLabel">Ball Set</p>
-    
-    <p class='ballSetLabel'>Player One</p>
-    <p id="player"></p>
-    <p id="cardTwo"></p>
-    <p id="cardThree"></p>
-    <button class="btn" type="button">Click Me!</button> -->
-
-    
+  <div class="grid_container">
+    <div class="grid_item1"></div>
+    <div class="grid_item2">Navigation</div>
+    <div class="grid_item3">
+      <div class="bingoHead">
+        <h1 class="header">AutoMatic Bingo</h1>
+      </div>
+      <div class="labelHolderForHeader bingoHead"><label class="labels" for="#">Number Set 1 - 90</label></div>
+      <div class="labelHolderForHeader"><label class="labels" for="#">Numbers Called</label></div>
+      <div class="bingoHead labelHolderForNumberCalled">
+        <label class="labels labelForNumberCalled" for="numberCalled">Number Called</label>
+      </div>
+      <div class="numberCalledHolder">
+        <div class="bingoHead numberCalled">ball called</div>
+      </div>
+    </div>
+    <fieldset class="grid_item4">
+      <legend>Players Area</legend>
+      <div class="playerSet">Status Light</div>
+      <div class="playerSet">Status Light</div>
+      <div class="playerSet">Status Light</div>
+      <div class="playerSet">Status Light</div>
+      <div class="playerSet playerLabel"><label class="labels" for="#">Player 1</label></div> 
+      <div class="playerSet playerLabel"><label class="labels" for="#">Player 2</label></div>
+      <div class="playerSet playerLabel"><label class="labels" for="#">Player 3</label></div>
+      <div class="playerSet playerLabel"><label class="labels" for="#">Player 4</label></div>
+      <div class="playerSet bingoCardHolder">
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+      </div>
+      <div class="playerSet bingoCardHolder">
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+      </div>
+      <div class="playerSet bingoCardHolder">
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+      </div>
+      <div class="playerSet bingoCardHolder">
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+        <div class="bingoCards">1</div>
+        <div class="bingoCards">2</div>
+        <div class="bingoCards">3</div>
+        <div class="bingoCards">4</div>
+        <div class="bingoCards">5</div>
+        <div class="bingoCards">6</div>
+        <div class="bingoCards">7</div>
+        <div class="bingoCards">8</div>
+        <div class="bingoCards">9</div>
+      </div>
+      <div class="playerSet">13</div>
+      <div class="playerSet buttonHolders"><button class="buttons">Quit</button></div>
+      <div class="playerSet buttonHolders"><button class="buttons">Start Game</button></div>
+      <div class="playerSet">16</div>
+    </fieldset>
+    <div class="grid_item5">Other pages you want to drive traffic to.</div>
+    <div class="grid_item6">Footer information</div>
+  </div>
 </body>
+
 </html>
