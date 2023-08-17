@@ -10,14 +10,12 @@
 </head>
 
 <body>
-
-
   <!-- pop-up dialog box containing a form to explain game and select player number -->
   <dialog class="modal" id="modal">
     <h3>AutoMatic Bingo</h3>
     <label for="numberSelect" class="playerAmtLbl">Choose Number of Players And Press OK:</label>
     <select name="numbers" id="numberSelect">
-      <option value="#">--Please choose an option--</option> 
+      <option value="#">--Please choose an option--</option>
       <option value="1">1 Player</option>
       <option value="2">2 Players</option>
       <option value="3">3 Players</option>
@@ -34,18 +32,17 @@
       each player chooses a player number and the first to<br>
       fill the card wins.</p>
   </dialog>
-  <!-- Simple html container and children to show the use of CSS Grid as a wireframe tool -->
   <div class="grid_container">
     <div class="grid_item1"></div>
     <div class="grid_item2">Navigation</div>
     <div class="grid_item3">
       <div class="bingoHead">
-        <h1 class="header">AutoMatic Bingo</h1>
+        <h1 id="header">AutoMatic Bingo</h1>
       </div>
-      <div class="labelHolderForHeader bingoHead"><label class="labels" for="#">Number Set 1 - 90</label></div>
+      <div class="labelHolderForHeader bingoHead"><label class="labels" for="#">Number Set 1 - 90</label><span class="fullNumSet"></span></div>
       <div class="labelHolderForHeader"><label class="labels" for="#">Numbers Called</label></div>
       <div class="bingoHead labelHolderForNumberCalled">
-        <label class="labels labelForNumberCalled" for="numberCalled">Number Called</label>
+        <label class="labelForNumberCalled" for="numberCalled">Number Called</label>
       </div>
       <div class="numberCalledHolder">
         <div class="bingoHead numberCalled">ball called</div>
@@ -53,14 +50,19 @@
     </div>
     <fieldset class="grid_item4">
       <legend>Players Area</legend>
-      <div class="playerSet">Status Light</div>
-      <div class="playerSet">Status Light</div>
-      <div class="playerSet">Status Light</div>
-      <div class="playerSet">Status Light</div>
-      <div class="playerSet playerLabel"><label class="labels" for="#">Player 1</label></div> 
+      <!-- <template> -->
+      <div class="playerSet statusLight"></div>
+      <div class="playerSet statusLight"></div>
+      <div class="playerSet statusLight"></div>
+      <div class="playerSet statusLight"></div>
+      <div class="playerSet playerLabel"><label class="labels" for="#">Player 1</label></div>
       <div class="playerSet playerLabel"><label class="labels" for="#">Player 2</label></div>
       <div class="playerSet playerLabel"><label class="labels" for="#">Player 3</label></div>
       <div class="playerSet playerLabel"><label class="labels" for="#">Player 4</label></div>
+      <div class="gamesWon statLabel"><label class="labels" for="#">Games Won</label><label class="labels" for="#">0</label></div>
+      <div class="gamesWon statLabel"><label class="labels" for="#">Games Won</label><label class="labels" for="#">0</label></div>
+      <div class="gamesWon statLabel"><label class="labels" for="#">Games Won</label><label class="labels" for="#">0</label></div>
+      <div class="gamesWon statLabel"><label class="labels" for="#">Games Won</label><label class="labels" for="#">0</label></div>
       <div class="playerSet bingoCardHolder">
         <div class="bingoCards">1</div>
         <div class="bingoCards">2</div>
@@ -177,11 +179,13 @@
         <div class="bingoCards">8</div>
         <div class="bingoCards">9</div>
       </div>
+    <!-- </template> -->
       <div class="playerSet">13</div>
       <div class="playerSet buttonHolders"><button class="buttons">Quit</button></div>
       <div class="playerSet buttonHolders"><button class="buttons">Start Game</button></div>
       <div class="playerSet">16</div>
     </fieldset>
+    
     <div class="grid_item5">Other pages you want to drive traffic to.</div>
     <div class="grid_item6">Footer information</div>
   </div>

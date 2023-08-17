@@ -1,31 +1,31 @@
-// const bingoGame = {
-//   ballSet: [],
-//   newCard: [],
+const bingoGame = {
+  ballSet: [],
+  //   newCard: [],
 
-//  replaceBalls() {
-//     for (let i = 1; i <= 90; i++) {
-//       this.ballSet.push([i]);
-//     }
-//   },
+  replaceBalls() {
+    for (let i = 1; i <= 90; i++) {
+      this.ballSet.push([i]);
+    }
+  },
 
-//   getNewCards() {
-//     let duplicates = [];
-//     //generate 15 random numbers for card and puts them in an array newCard
-//     for (let i = 0; i <= 14; i++) {
-//       let randNum = Math.floor((Math.random() * this.ballSet.length) + 1);
-//       this.newCard.push(randNum);
-//     }
-//     const tempArray = this.newCard.sort();
+  //   getNewCards() {
+  //     let duplicates = [];
+  //     //generate 15 random numbers for card and puts them in an array newCard
+  //     for (let i = 0; i <= 14; i++) {
+  //       let randNum = Math.floor((Math.random() * this.ballSet.length) + 1);
+  //       this.newCard.push(randNum);
+  //     }
+  //     const tempArray = this.newCard.sort();
 
-//     for (let i = 0; i < tempArray.length; i++) {
-//       if (tempArray[i + 1] === tempArray[i]) {
-//         duplicates.push(tempArray[i])
-//       }
-//     }
+  //     for (let i = 0; i < tempArray.length; i++) {
+  //       if (tempArray[i + 1] === tempArray[i]) {
+  //         duplicates.push(tempArray[i])
+  //       }
+  //     }
 
-//     console.log(duplicates)
-//   },
-// };
+  //     console.log(duplicates)
+  //   },
+};
 
 
 
@@ -38,19 +38,20 @@
 //array.splice(start, deleteCount, item 1, item2);
 //this.ballSet.splice(3, 1, 6); takes out number 4 and puts 6 in it's place.
 
-
-
-
 const modal = document.getElementById("modal");
-const closeModal = document.querySelector(".numButton");
 
 window.addEventListener("DOMContentLoaded", (event) => {
   modal.showModal();
 });
 
-closeModal.addEventListener("click",()=> {
+const closeModal = document.querySelector(".numButton");
+
+closeModal.addEventListener("click", () => {
   const playerNum = document.getElementById("numberSelect").value;
   modal.close();
+  bingoGame.replaceBalls();
+  let set = bingoGame.ballSet;
+  document.querySelector(".fullNumSet").innerHTML = set.join(' ');
 });
 
 
@@ -58,10 +59,10 @@ closeModal.addEventListener("click",()=> {
 
 
 //call the method that fills the array
-//bingoGame.replaceBalls();
+
 //bingoGame.getNewCards();
 //call the newly filled array
-//let set = bingoGame.ballSet;
+
 //let card = bingoGame.newCard;
 //console.log(set.join(' '));
 //console.log(card.join(', '))
@@ -70,7 +71,7 @@ closeModal.addEventListener("click",()=> {
 
 
 //The html elements id is called and populated with the contents of the variable from the newly filled array.
-//document.getElementById("ballSet").innerHTML = set.join(' ');
+//
 //document.getElementById("player"). innerHTML = card.join(' ');
 //document.getElementById("cardTwo"). innerHTML = cardTwo.join(' ');
 //document.getElementById("cardThree"). innerHTML = cardThree.join(' ');
@@ -82,7 +83,7 @@ closeModal.addEventListener("click",()=> {
 
 //   });
 
-  //const button = document.querySelector(".btn");
-// button.onclick = () => {
-//   document.getElementById("player").innerHTML = card.join(' ');
-// }
+const button = document.querySelector(".btn");
+button.onclick = () => {
+  document.getElementById("player").innerHTML = card.join(' ');
+}

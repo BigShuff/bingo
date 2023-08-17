@@ -10,7 +10,55 @@ html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* NOTE All commented out sections show long hand or other versions of the same way to code */
+/* css for dialog element */
+.modal::backdrop{
+    max-width: 200rem;
+    background: rgb(0 0 0 / .7);
+}
+
+h3{
+    font-size: 2.5rem;
+    color: crimson; 
+}
+
+.playerAmtLbl{
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding-right: 1rem;
+}
+
+.howToPlay{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+select option{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
+h4{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.numButton{
+    width: 10rem;
+    height: 5rem;
+    font-size: 2rem;
+    font-weight: 700;
+   
+}
+
+.flexCont{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+/* Grid design of game interface */
 .grid_container {
     width: 100vw;
     height: 100vh;
@@ -20,7 +68,7 @@ html{
     grid-template-columns: 1fr 5fr 1fr;
     
 }
-/* grid-row: start / finish The finish number is always one more than it acutally is below row finishes on 1 column finishes on 3 */
+
 .grid_item1 {
     border: 2px solid black;
     grid-row: 1 / 2;
@@ -38,7 +86,7 @@ html{
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     display: grid;
-    grid-template-rows: 2fr 1fr 1fr 1fr 2fr;
+    grid-template-rows: 2fr 2fr 1fr 1fr 2fr;
     grid-template-columns : 1fr;
     /* margin: 1rem; */
     
@@ -49,16 +97,16 @@ html{
 }
 
 .grid_item4 {
-    border: 2px solid rgb(2, 55, 245);
+    /* border: 2px solid rgb(2, 55, 245); */
     grid-row: 3 / 4;
     grid-column: 2 / 3;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr 1fr 2fr 2fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 2rem;
     /* margin: 1rem; */
-   
-}
+    }
 
 .playerSet{
     border: 1px solid black;
@@ -70,85 +118,50 @@ html{
     grid-column: 3 / 4;
 }
 
-.grid_item6 {
+.grid_item6{
     border: 2px solid black;
     grid-row: 4 / 5;
     grid-column: 1 / 4;
    
 } 
 
-.header{
-    color: crimson;
-    font-size: 3rem;
+#header{
+    font-size: 4rem;
     padding-left: 1rem;
+    color:red;
 }
 
-.modal{
-    max-width: 200rem;
-}
-
-h3{
-    font-size: 2.5rem;
-    color: crimson; 
-}
-.howToPlay{
-    font-size: 1.6rem;
-    font-weight: 500;
-    
-}
-
-select option{
-    font-size: 1.6rem;
-    font-weight: 500;
-}
-
-.playerAmtLbl{
-    font-size: 1.6rem;
-    font-weight: 500;
-    padding-right: 1rem;
-}
-
-h4{
+legend{
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 0;
 }
-
-.numButton{
-    width: 10rem;
-    height: 5rem;
-   
-}
-
-.flexCont{
-    display: flex;
-    justify-content: center;
-    margin-top: 2.5rem;
-}
-
 .labelHolderForHeader{
     display: grid;
     align-items: center;
 }
 
+.statusLight{
+    background-color: blue}
+
 .labelHolderForNumberCalled{
     display: grid;
     justify-items: center;
     align-content: end;
-    
-
 }
+
 .labelForNumberCalled{
     height: 2rem;
     width: 15rem;
     border: 1px solid red;
     padding-bottom: 1rem;
-    
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .labels{
     font-size: 2rem;
     font-weight: 700;
+    margin-left: 1rem;
 }
 
 .numberCalledHolder{
@@ -164,8 +177,13 @@ h4{
 }
 
 .playerLabel{
+    width: 10rem;
     margin: auto;
     /* text-align: center; */
+}
+
+.statLabel{
+    margin: auto;
 }
 
 .buttonHolders{
@@ -180,8 +198,6 @@ h4{
     font-weight: 700;
     font-size: 2rem;
     cursor:pointer;
-
-   
 }
 
 .bingoCardHolder{
@@ -193,4 +209,10 @@ h4{
 
 .bingoCards{
     border: 1px solid black;
+}
+
+.fullNumSet{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
 }
