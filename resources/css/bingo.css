@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 html{
@@ -73,12 +72,14 @@ h4{
     border: 2px solid black;
     grid-row: 1 / 2;
     grid-column: 1 / 4;
+    background-color: darkgrey;
 }
 
 .grid_item2 {
     border: 2px solid black;
     grid-row: 2 / 4;
     grid-column: 1 / 2;
+    background-color: darkgrey;
 }
 
 .grid_item3 {
@@ -96,13 +97,25 @@ h4{
     border: 1px solid black;
 }
 
-.grid_item4 {
+.grid_item4ForThree {
     /* border: 2px solid rgb(2, 55, 245); */
     grid-row: 3 / 4;
     grid-column: 2 / 3;
     display: grid;
     justify-content: center;
-    grid-template-rows: 1fr 1fr 1fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+    /* margin: 1rem; */
+}
+
+.grid_item4ForFour {
+    /* border: 2px solid rgb(2, 55, 245); */
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr 2fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 2rem;
     /* margin: 1rem; */
@@ -116,13 +129,14 @@ h4{
     border: 2px solid black;
     grid-row: 2 / 4;
     grid-column: 3 / 4;
+    background-color: darkgrey;
 }
 
 .grid_item6{
     border: 2px solid black;
     grid-row: 4 / 5;
     grid-column: 1 / 4;
-   
+    background-color: darkgrey;
 } 
 
 #header{
@@ -147,6 +161,7 @@ legend{
     display: grid;
     justify-items: center;
     align-content: end;
+    text-align: center;
 }
 
 .labelForNumberCalled{
@@ -156,6 +171,7 @@ legend{
     padding-bottom: 1rem;
     font-size: 2rem;
     font-weight: 700;
+
 }
 
 .labels{
@@ -166,14 +182,18 @@ legend{
 
 .numberCalledHolder{
     display: grid;
-    justify-items: center;
-    align-content: center;
+    justify-content: center;
+   /* height and width go on here for next time. */
 }
 
 .numberCalled{
     height: 8rem;
     width: 8rem;
     border: 1px solid black;
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: center;
+    line-height: 8rem;
 }
 
 .playerLabel{
@@ -215,4 +235,13 @@ legend{
     font-size: 2rem;
     font-weight: 700;
     margin: 1rem;
+}
+
+.gamesWonNumHolder{
+    display: grid;
+    justify-content: center;
+}
+
+.gamesWonTxt{
+    align-self: center;
 }
