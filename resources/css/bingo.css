@@ -97,6 +97,18 @@ h4{
     border: 1px solid black;
 }
 
+.grid_item4ForTwo {
+    /* border: 2px solid rgb(2, 55, 245); */
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr 1fr 1fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    /* margin: 1rem; */
+}
+
 .grid_item4ForThree {
     /* border: 2px solid rgb(2, 55, 245); */
     grid-row: 3 / 4;
