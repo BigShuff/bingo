@@ -1,11 +1,15 @@
 const bingoGame = {
   ballSet: [],
-  //   newCard: [],
-
+ 
   replaceBalls() {
     for (let i = 1; i <= 90; i++) {
       this.ballSet.push([i]);
     }
+  },
+
+  displayBalls(){
+    let set = bingoGame.ballSet;
+    document.querySelector(".fullNumSet").innerHTML = set.join(' ');
   },
 
   //   getNewCards() {
@@ -30,28 +34,23 @@ const bingoGame = {
 
 
 
-//insert into an array at a specific place
-//about inserting into an array
-//array: name of array / start: the element you wish to inset at (the changes take place immediately after)
-//deleteCount: the amount of items you wish to delete starting place is start index,
-//item 1 etc: the content of what you wish to put into the array at start index.
-//array.splice(start, deleteCount, item 1, item2);
-//this.ballSet.splice(3, 1, 6); takes out number 4 and puts 6 in it's place.
 
-const modal = document.getElementById("modal");
 
+
+//show modal when rest of content has loaded
 window.addEventListener("DOMContentLoaded", (event) => {
+  const modal = document.getElementById("modal");
   modal.showModal();
 });
 
 const closeModal = document.querySelector(".numButton");
-
+//when modal closes get number of players and display full set of bingo numbers
 closeModal.addEventListener("click", () => {
   const playerNum = document.getElementById("numberSelect").value;
   modal.close();
   bingoGame.replaceBalls();
-  let set = bingoGame.ballSet;
-  document.querySelector(".fullNumSet").innerHTML = set.join(' ');
+  bingoGame.displayBalls();
+  
 });
 
 
@@ -75,7 +74,7 @@ closeModal.addEventListener("click", () => {
 //document.getElementById("player"). innerHTML = card.join(' ');
 //document.getElementById("cardTwo"). innerHTML = cardTwo.join(' ');
 //document.getElementById("cardThree"). innerHTML = cardThree.join(' ');
-
+//document.getElementById("player").innerHTML = card.join(' ');
 
 
 // numButton.addEventListener("click", ()=>{
@@ -83,7 +82,3 @@ closeModal.addEventListener("click", () => {
 
 //   });
 
-const button = document.querySelector(".btn");
-button.onclick = () => {
-  document.getElementById("player").innerHTML = card.join(' ');
-}

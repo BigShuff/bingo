@@ -61,7 +61,6 @@ h4{
 .grid_container {
     width: 100vw;
     height: 100vh;
-    border: 2px solid red;
     display: grid;
     grid-template-rows: 1fr 2fr 6fr 1fr;
     grid-template-columns: 1fr 5fr 1fr;
@@ -69,21 +68,18 @@ h4{
 }
 
 .grid_item1 {
-    border: 2px solid black;
     grid-row: 1 / 2;
     grid-column: 1 / 4;
     background-color: darkgrey;
 }
 
 .grid_item2 {
-    border: 2px solid black;
     grid-row: 2 / 4;
     grid-column: 1 / 2;
     background-color: darkgrey;
 }
 
 .grid_item3 {
-    border: 2px solid rgb(6, 240, 108);
     grid-row: 2 / 3;
     grid-column: 2 / 3;
     display: grid;
@@ -93,106 +89,165 @@ h4{
     
 }
 
-.bingoHead{
-    border: 1px solid black;
+#header{
+    font-size: 4rem;
+    margin-left: 1rem;
+    color:crimson;
 }
 
-.grid_item4ForTwo {
-    /* border: 2px solid rgb(2, 55, 245); */
+.fullNumSet{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
+    color: rgb(86, 84, 84);
+}
+
+.labelForNumSet{
+    font-size: 2rem;
+    color: darkblue;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.lablelForNumbersCalled{
+    font-size: 2rem;
+    color: darkblue;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.labelForCurrentNum{
+    font-size: 2rem;
+    color: darkblue;
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.innerNumberCalledHolder{
+    text-align: center;
+}
+
+.templateHolder {
+    width: 36rem;
     grid-row: 3 / 4;
     grid-column: 2 / 3;
     display: grid;
-    justify-content: center;
-    grid-template-rows: 1fr 1fr 1fr 1fr 2fr 2fr;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
-    /* margin: 1rem; */
+    grid-template-rows: 1fr 1fr 1fr 1fr 3fr;
+    grid-template-columns: 1fr;
+    margin: 1rem;
 }
 
-.grid_item4ForThree {
-    /* border: 2px solid rgb(2, 55, 245); */
+.grid_item4{
+    display: grid;
     grid-row: 3 / 4;
     grid-column: 2 / 3;
-    display: grid;
-    justify-content: center;
-    grid-template-rows: 1fr 1fr 1fr 1fr 2fr 2fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 2rem;
-    /* margin: 1rem; */
-}
-
-.grid_item4ForFour {
-    /* border: 2px solid rgb(2, 55, 245); */
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-    display: grid;
-    justify-content: center;
-    grid-template-rows: 1fr 1fr 1fr 1fr 2fr 2fr;
+    justify-content: flex-start;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 2rem;
-    /* margin: 1rem; */
-    }
+    height:37vh;
+}
 
-.playerSet{
-    border: 1px solid black;
+.divForPlayer{
+    width: 36rem;
 }
 
 .grid_item5 {
-    border: 2px solid black;
     grid-row: 2 / 4;
     grid-column: 3 / 4;
     background-color: darkgrey;
 }
 
 .grid_item6{
-    border: 2px solid black;
     grid-row: 4 / 5;
     grid-column: 1 / 4;
     background-color: darkgrey;
 } 
 
-#header{
-    font-size: 4rem;
-    padding-left: 1rem;
-    color:red;
-}
-
-legend{
-    font-size: 2rem;
-    font-weight: 700;
-}
 .labelHolderForHeader{
     display: grid;
     align-items: center;
 }
 
 .statusLight{
-    background-color: blue}
-
-.labelHolderForNumberCalled{
-    display: grid;
-    justify-items: center;
-    align-content: end;
-    text-align: center;
+    width: 34rem;
+    background-color: rgb(198, 198, 201)
 }
 
-.labelForNumberCalled{
-    height: 2rem;
-    width: 15rem;
-    border: 1px solid red;
-    padding-bottom: 1rem;
+.playerLabel{
     font-size: 2rem;
     font-weight: 700;
+    width: 34rem;
+    border-bottom: 1px dashed darkgrey;
+    text-align: center;
+    color:darkblue;
+}
 
+
+
+.statLblNumHolder{
+    font-size: 2rem;
+    font-weight: 700;
+    width: 34rem;
+    display: grid;
+    /* justify-content: center; */
+    border-bottom: 1px dashed darkgrey;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: rgb(86, 84, 84);
+}
+
+.gamesWonTxt{
+    font-size: 2rem;
+    font-weight: 700;
+    width: 34rem;
+    border-bottom: 1px dashed darkgrey;
+    text-align: center;
+    color:darkblue;
+    
+}
+
+.bingoCardHolder{
+    max-width: 34rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.bingoCards{
+    border: 1px solid black;
+   
+}
+
+.buttonHolders{
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.buttons{
+    align-self: center;
+    height: 4rem;
+    width: 10rem;
+    font-weight: 700;
+    font-size: 2rem;
+    cursor:pointer;
+    color: darkblue;
+    border: none;
+}
+
+.quitBtn{
+    margin-left: 12rem;
 }
 
 .labels{
     font-size: 2rem;
     font-weight: 700;
     margin-left: 1rem;
+    color: darkblue;
 }
 
 .numberCalledHolder{
+    
     display: grid;
     justify-content: center;
    /* height and width go on here for next time. */
@@ -201,59 +256,10 @@ legend{
 .numberCalled{
     height: 8rem;
     width: 8rem;
-    border: 1px solid black;
+    border: 3px solid crimson;
     font-size: 6rem;
     font-weight: 700;
     text-align: center;
     line-height: 8rem;
-}
-
-.playerLabel{
-    width: 10rem;
-    margin: auto;
-    /* text-align: center; */
-}
-
-.statLabel{
-    margin: auto;
-}
-
-.buttonHolders{
-    display: flex;
-    justify-content: center;
-}
-
-.buttons{
-    align-self: center;
-    height: 6rem;
-    width: 20rem;
-    font-weight: 700;
-    font-size: 2rem;
-    cursor:pointer;
-}
-
-.bingoCardHolder{
-    border: 1px solid black;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.bingoCards{
-    border: 1px solid black;
-}
-
-.fullNumSet{
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 1rem;
-}
-
-.gamesWonNumHolder{
-    display: grid;
-    justify-content: center;
-}
-
-.gamesWonTxt{
-    align-self: center;
+    color: rgb(86, 84, 84);
 }
