@@ -173,7 +173,7 @@ h4{
     background-color: rgb(198, 198, 201)
 }
 
-.playerLabel{
+.playerLabel {
     font-size: 2rem;
     font-weight: 700;
     width: 34rem;
@@ -256,10 +256,11 @@ h4{
 .numberCalled{
     height: 8rem;
     width: 8rem;
-    border: 3px solid crimson;
     font-size: 6rem;
     font-weight: 700;
+    margin: auto;
     text-align: center;
     line-height: 8rem;
     color: rgb(86, 84, 84);
+    border: 3px solid darkblue;
 }
